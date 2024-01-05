@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Get-Data</title>
+    </head>
+
+ 
+    <body>
+        <input type="text" id="textbox">
+        <button id="add-button">Add to page</button>
+        <div id="container"></div>
+    <script>
+        const addButton=document.getElementById("add-button");
+        const textbox=document.getElementById("textbox");
+        const container=document.getElementById("container");
+
+        addButton.addEventListener("click", function(){
+            const textToAdd= textbox.value;
+            const newDiv=document.createElement("div");
+            newDiv.textContent=textToAdd;
+            container.appendChild(newDiv);
+            textbox.value="";
+        });
+
+
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Excercise 8</title>
+  </head>
+  <body>
+    <div id="counter">0</div>
+    <button id="upButton">Up</button>
+
+    <button id="downButton">Down</button>
+
+    <button id="todo-button">Click here</button>
+
+
+    <button> GetData </button>
+    <div></div>
+    <script>
+
+        const todobutton=document.getElementById("todo-button");
+
+        todobutton.addEventListener('click', function(){
+            this.innerHTML="Done";
+        })
+
+    //   const todoButton = document.getElementById("todo-button");
+    //   todoButton.addEventListener("click", function () {
+    //     this.innerText = "done";
+    //   });
+
+
+    let count=0;
+
+    const upButton=document.getElementById('upButton');
+    upButton.addEventListener("click", function(){
+        count++;
+        document.getElementById('counter').textContent=count;
+    })
+
+    const downButton=document.getElementById('downButton');
+    downButton.addEventListener("click", function(){
+        count=count-1;
+        document.getElementById('counter').textContent=count;
+    });
+
+
+
+
+
+
+    //   let count = 0;
+
+    //   const upButton = document.getElementById("upButton");
+
+    //   upButton.addEventListener("click", function () {
+    //     count++;
+    //     document.getElementById("counter").textContent = count;
+    //   });
+    </script>
+  </body>
+</html>
